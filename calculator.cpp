@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <conio.h>
+#include <typeinfo>
+#include <iostream>
 int main() {
    float num1;
    float num2;
@@ -8,11 +10,12 @@ int main() {
 
    printf("Enter the first number: ");
    scanf("%f",&num1);
+//    std::cout << typeid(num1).name();
    
    printf("Enter the operation you want to preform (+, -, *, /): ");
    scanf(" %c",&op);
 
-   printf("Enter the seconf number: ");
+   printf("Enter the second number: ");
    scanf("%f",&num2);
 
     switch (op)
@@ -20,6 +23,7 @@ int main() {
     case '+':
     result = num1 + num2;
     printf("%f",result);
+    // printf(typeid(op).name());
     break;
     case '-':
     result = num1 - num2;
